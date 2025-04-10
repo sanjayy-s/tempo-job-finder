@@ -9,7 +9,7 @@ export function Footer() {
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <Briefcase className="w-5 h-5 text-tempo-blue" />
-              <span className="font-semibold text-tempo-blue">TempoMatch</span>
+              <span className="font-semibold text-tempo-blue">JobJosh</span>
             </div>
             <p className="text-sm text-gray-500">
               AI-powered part-time job matching for job seekers and recruiters.
@@ -78,7 +78,7 @@ export function Footer() {
         </div>
         <div className="mt-8 pt-6 border-t border-slate-200">
           <p className="text-xs text-center text-gray-500">
-            © {new Date().getFullYear()} TempoMatch. All rights reserved.
+            © {new Date().getFullYear()} JobJosh. All rights reserved.
           </p>
         </div>
       </div>

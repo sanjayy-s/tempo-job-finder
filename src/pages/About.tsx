@@ -12,7 +12,7 @@ const About = () => {
     <Layout>
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">How TempoMatch Works</h1>
+          <h1 className="text-4xl font-bold mb-4">How JobJosh Works</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             The smarter way to connect job seekers with part-time opportunities through AI-powered matching.
           </p>
@@ -23,7 +23,7 @@ const About = () => {
             <div>
               <h2 className="text-2xl font-semibold mb-4">For Job Seekers</h2>
               <p className="text-gray-600 mb-6">
-                TempoMatch helps you find part-time opportunities that match your skills and preferences. Our AI technology understands your strengths and recommends jobs where you'll excel.
+                JobJosh helps you find part-time opportunities that match your skills and preferences. Our AI technology understands your strengths and recommends jobs where you'll excel.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -86,7 +86,7 @@ const About = () => {
             <div className="order-1 md:order-2">
               <h2 className="text-2xl font-semibold mb-4">For Recruiters</h2>
               <p className="text-gray-600 mb-6">
-                TempoMatch helps you find the perfect candidates for your temporary positions quickly and efficiently. Our AI analyzes skills and preferences to deliver qualified applicants.
+                JobJosh helps you find the perfect candidates for your temporary positions quickly and efficiently. Our AI analyzes skills and preferences to deliver qualified applicants.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -133,7 +133,7 @@ const About = () => {
         <div className="bg-tempo-blue text-white rounded-lg p-8 md:p-12 text-center mb-16">
           <h2 className="text-2xl font-semibold mb-4">Our AI Matching Technology</h2>
           <p className="mb-6 max-w-2xl mx-auto">
-            TempoMatch uses advanced natural language processing and machine learning algorithms to understand job requirements and candidate skills at a deeper level.
+            JobJosh uses advanced natural language processing and machine learning algorithms to understand job requirements and candidate skills at a deeper level.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-8">
             <div className="bg-white bg-opacity-10 rounded-lg p-6">

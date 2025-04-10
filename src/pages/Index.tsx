@@ -103,7 +103,7 @@ const Index = () => {
       {/* How it works section */}
       <section className="py-12 md:py-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-8 text-center">How TempoMatch Works</h2>
+          <h2 className="text-2xl font-semibold mb-8 text-center">How JobJosh Works</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center">
@@ -145,7 +145,7 @@ const Index = () => {
       <section className="py-12 bg-tempo-blue text-white -mx-4 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-4">Ready to find your perfect match?</h2>
-          <p className="mb-8">Join thousands of job seekers and recruiters already using TempoMatch.</p>
+          <p className="mb-8">Join thousands of job seekers and recruiters already using JobJosh.</p>
           <Button 
             size="lg" 
             variant="secondary" 

@@ -27,7 +27,7 @@ export function Header() {
           </Button>
           <a href="/" className="flex items-center gap-2">
             <Briefcase className="w-6 h-6 text-tempo-blue" />
-            <span className="text-xl font-semibold tracking-tight text-tempo-blue">TempoMatch</span>
+            <span className="text-xl font-semibold tracking-tight text-tempo-blue">JobJosh</span>
           </a>
         </div>
         <nav className="hidden md:flex md:items-center md:gap-6">
