@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Job, JobApplication, JobSeeker, User } from '@/types';
 import { mockJobs, mockApplications } from '@/lib/mockData';
-import { toast } from "@/components/ui/sonner";
+import { toast } from "sonner";
 import { useAuth } from './AuthContext';
 
 interface JobContextType {

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Layout } from "@/components/Layout";
@@ -26,7 +25,7 @@ import { useJobs } from "@/contexts/JobContext";
 import { useAuth } from "@/contexts/AuthContext";
 import { RequireAuth } from "@/components/RequireAuth";
 import { formatDistanceToNow, format } from "date-fns";
-import { toast } from "@/components/ui/sonner";
+import { toast } from "sonner";
 
 const ManageJobApplications = () => {
   const { id } = useParams<{ id: string }>();
@@ -47,14 +46,11 @@ const ManageJobApplications = () => {
   const job = id ? getJobById(id) : undefined;
   const applications = id ? getApplicationsForJob(id) : [];
   
-  // Filter applications by status
   const pendingApplications = applications.filter(app => app.status === "pending");
   const viewedApplications = applications.filter(app => app.status === "viewed");
   const processedApplications = applications.filter(app => ["accepted", "rejected"].includes(app.status));
   
   const handleViewApplication = (applicationId: string) => {
-    // In a real app, this would update the application status to "viewed"
-    // For this demo, we'll just navigate to the application detail
     navigate(`/applications/${applicationId}`);
   };
   
@@ -84,7 +80,6 @@ const ManageJobApplications = () => {
         toast.success("Application rejected successfully.");
       }
     } catch (error) {
-      // Error handled in JobContext
     }
   };
   
@@ -95,7 +90,6 @@ const ManageJobApplications = () => {
       await updateJobStatus(id, "closed");
       toast.success("Job listing closed successfully.");
     } catch (error) {
-      // Error handled in JobContext
     }
   };
 
@@ -111,7 +105,6 @@ const ManageJobApplications = () => {
     );
   }
 
-  // Check if the current user is the job owner
   if (job.recruiterId !== user.id) {
     return (
       <Layout>
@@ -128,7 +121,6 @@ const ManageJobApplications = () => {
     <RequireAuth allowedRoles={["recruiter"]}>
       <Layout>
         <div className="max-w-4xl mx-auto">
-          {/* Back button */}
           <Button 
             variant="ghost" 
             className="mb-6 pl-0 hover:bg-transparent"
@@ -138,7 +130,6 @@ const ManageJobApplications = () => {
             Back to my jobs
           </Button>
           
-          {/* Job header */}
           <div className="bg-white rounded-lg border p-6 mb-6">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
               <div>
@@ -190,7 +181,6 @@ const ManageJobApplications = () => {
             </div>
           </div>
           
-          {/* Applications tabs */}
           <h2 className="text-xl font-semibold mb-4">Applications</h2>
           
           {applications.length === 0 ? (
@@ -406,7 +396,6 @@ const ManageJobApplications = () => {
           )}
         </div>
         
-        {/* Feedback Dialog */}
         <Dialog 
           open={!!selectedApplication && !!actionType} 
           onOpenChange={(open) => !open && setSelectedApplication(null)}

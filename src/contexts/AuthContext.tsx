@@ -1,8 +1,7 @@
-
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { User, JobSeeker, Recruiter } from '@/types';
 import { mockJobSeekers, mockRecruiters } from '@/lib/mockData';
-import { toast } from "@/components/ui/sonner";
+import { toast } from "sonner";
 
 interface AuthContextType {
   user: User | null;
@@ -10,7 +9,7 @@ interface AuthContextType {
   login: (email: string, password: string, role: "seeker" | "recruiter") => Promise<void>;
   signup: (userData: Partial<User>, password: string) => Promise<void>;
   logout: () => void;
-  updateProfile: (userData: Partial<User>) => Promise<void>;
+  updateProfile: (userData: Partial<JobSeeker | Recruiter>) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -116,7 +115,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     toast.info("You've been logged out");
   };
 
-  const updateProfile = async (userData: Partial<User>) => {
+  const updateProfile = async (userData: Partial<JobSeeker | Recruiter>) => {
     setLoading(true);
     
     try {

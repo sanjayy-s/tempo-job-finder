@@ -46,7 +46,7 @@ const Profile = () => {
   const seekerUser = user as JobSeeker;
   const recruiterUser = user as Recruiter;
   
-  const handleUpdateProfile = async (updatedData: Partial<typeof user>) => {
+  const handleUpdateProfile = async (updatedData: Partial<JobSeeker | Recruiter>) => {
     setIsUpdating(true);
     
     try {
@@ -65,7 +65,7 @@ const Profile = () => {
     
     handleUpdateProfile({ 
       skills: updatedSkills 
-    });
+    } as Partial<JobSeeker>);
     
     setNewSkill({ name: "", level: 3, endorsements: 0 });
     setIsAddingSkill(false);
